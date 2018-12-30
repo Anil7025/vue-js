@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="">
+    <script src="https://unpkg.com/vue@2.5.21/dist/vue.js"></script>
+    <title>costom</title>
+    
+    
+</head>
+<body>
+    <h2>costome directive</h2>
+    <div id="newApp">
+        <button type="submit" v-on:click="updateValue" title="title no updated" v-custom-directive:channel.a.b.c="message">click me</button>
+        <button type="submit" v-custom-directive="{name : 'Anil', designation : 'php'}"></button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

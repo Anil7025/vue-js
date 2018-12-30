@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="">
+    <script src="https://unpkg.com/vue@2.5.21/dist/vue.js"></script>
+    <title>Event</title>
+    
+</head>
+<body>
+    <h2>Event modifiers</h2>
+    <div id="newApp">
+        <h3>Counter :{{ counter }}</h3>
+        <button type="submit"@click.once="incrementby1">click +1</button><br/><br/>
+        <a href="http://www.google.com" @click.prevent>Google</a><br/><br/>
+
+
+        <form action="#" method="post"@submit.prevent>
+            <button type="submit">Submit</button>
+        </form><br/><br/>
+        <div id="parent-div" @click="submitClick">
+            <button id="child-div" @click.stop="submitClick">
+                click me
+            </button>
+        </div>
+        <br/><br/>
+        <div id="parentlass" @click.capture="parentClass">
+            <button id="child-div" @click="btnClick">
+                click me Again
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
